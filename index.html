@@ -1,16 +1,14 @@
 
 <!DOCTYPE html>
 <html lang="fr">
-<head><meta name="google-site-verification" content="UmVAyaVMtIF9Ehahc8qQJ0GQKgs87AhaxHEKYfViTGo" />
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>TEBBY | Boutique Made in Sénégal</title>
-  <meta name="description" content="Découvrez TEBBY, votre boutique en ligne Made in Sénégal. Vêtements et ensembles pour hommes et femmes. Commandez sur WhatsApp.">
-
-  <meta name="keywords" content="TEBBY, boutique Sénégal, vêtements Sénégal, Made in Sénégal, mode homme, mode femme">
-
+  <meta name="description" content="Découvrez TEBBY, votre boutique de vêtements et accessoires au Sénégal. Commandez directement sur WhatsApp.">
   <meta name="theme-color" content="#111111">
+  <meta name="google-site-verification" content="UmVAyaVMtIF9Ehahc8qQJ0GQKgs87AhaxHEKYfViTGo">
 
   <style>
     * {
@@ -29,7 +27,7 @@
     header {
       background: #111;
       color: white;
-      padding: 22px 7%;
+      padding: 20px 7%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -37,17 +35,21 @@
       gap: 15px;
     }
 
-    .logo {
-      font-size: 30px;
-      font-weight: bold;
+    header h1 {
       color: #d4af37;
-      letter-spacing: 4px;
+      font-size: 30px;
+      letter-spacing: 3px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 20px;
       font-size: 14px;
     }
 
@@ -56,48 +58,45 @@
     }
 
     .hero {
-      background: linear-gradient(135deg, #111, #333);
+      background: linear-gradient(120deg, #111, #393124);
       color: white;
       text-align: center;
-      padding: 100px 20px;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      color: #d4af37;
-      letter-spacing: 5px;
+      padding: 90px 20px;
     }
 
     .hero h2 {
-      font-size: 25px;
-      margin: 15px 0;
+      font-size: 38px;
+      margin-bottom: 15px;
     }
 
     .hero p {
-      max-width: 650px;
-      margin: 15px auto 25px;
-      color: #eee;
+      font-size: 17px;
+      margin-bottom: 25px;
     }
 
     .button {
       display: inline-block;
       background: #d4af37;
       color: #111;
-      padding: 13px 25px;
+      padding: 12px 23px;
       border-radius: 4px;
       text-decoration: none;
       font-weight: bold;
       margin: 8px;
     }
 
+    .button:hover {
+      background: #f0d46e;
+    }
+
     section {
-      padding: 65px 7%;
+      padding: 55px 7%;
     }
 
     .section-title {
       text-align: center;
       font-size: 30px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .gold-line {
@@ -107,24 +106,17 @@
       margin: 0 auto 35px;
     }
 
-    .about {
-      text-align: center;
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .about p {
-      margin-bottom: 15px;
-    }
-
-    .categories {
-      background: #f7f7f7;
+    .category-title {
+      font-size: 23px;
+      margin: 35px 0 20px;
+      border-left: 4px solid #d4af37;
+      padding-left: 12px;
     }
 
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
     }
 
     .product {
@@ -133,24 +125,20 @@
       border-radius: 8px;
       overflow: hidden;
       text-align: center;
-      padding-bottom: 22px;
+      padding-bottom: 18px;
       box-shadow: 0 3px 12px #0000000c;
     }
 
-    .photo-placeholder {
-      height: 240px;
-      background: #e9e6df;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #777;
-      font-size: 14px;
-      padding: 15px;
+    .product img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
     }
 
     .product h3 {
-      margin: 18px 10px 5px;
-      font-size: 18px;
+      margin: 15px 8px 5px;
+      font-size: 17px;
     }
 
     .price {
@@ -166,52 +154,46 @@
     }
 
     .contact {
-      background: #111;
-      color: white;
+      background: #f7f7f7;
       text-align: center;
     }
 
     .contact p {
-      margin: 12px;
+      margin: 10px 0;
     }
 
     .contact a {
-      color: #d4af37;
-      text-decoration: none;
+      color: #8b6b13;
+      font-weight: bold;
     }
 
     footer {
-      background: #080808;
-      color: #aaa;
+      background: #111;
+      color: white;
       text-align: center;
-      padding: 25px 15px;
-      font-size: 13px;
+      padding: 22px;
     }
 
-    @media(max-width: 600px) {
+    footer span {
+      color: #d4af37;
+    }
+
+    @media (max-width: 600px) {
       header {
         justify-content: center;
         text-align: center;
       }
 
-      nav a {
-        margin: 0 8px;
-      }
-
-      .hero {
-        padding: 70px 15px;
-      }
-
-      .hero h1 {
-        font-size: 35px;
+      nav {
+        justify-content: center;
       }
 
       .hero h2 {
-        font-size: 21px;
+        font-size: 29px;
       }
 
       section {
-        padding: 45px 5%;
+        padding: 40px 5%;
       }
     }
   </style>
@@ -219,92 +201,211 @@
 
 <body>
 
-<header>
-  <div class="logo">TEBBY</div>
-
-  <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#apropos">La marque</a>
-    <a href="#catalogue">Catalogue</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
-
-<main>
+  <header>
+    <h1>TEBBY</h1>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#boutique">Boutique</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
   <section class="hero" id="accueil">
-    <h1>TEBBY</h1>
-    <h2>LA MARQUE QUI RASSURE</h2>
-    <p>
-      Bienvenue chez TEBBY, votre boutique en ligne dédiée
-      à la mode et à la valorisation du savoir-faire sénégalais.
-    </p>
-    <a class="button" href="#catalogue">Découvrir le catalogue</a>
+    <h2>Bienvenue chez TEBBY</h2>
+    <p>TEBBY, la marque qui rassure.</p>
+    <p>Découvrez notre collection de vêtements et accessoires.</p>
+    <a class="button" href="#boutique">Découvrir la boutique</a>
   </section>
 
-  <section id="apropos">
-    <h2 class="section-title">Bienvenue chez TEBBY</h2>
-    <div class="gold-line"></div>
-
-    <div class="about">
-      <p>
-        TEBBY est une boutique en ligne basée à Petit Mbao,
-        au Sénégal. Notre ambition est de proposer des articles
-        de qualité, accessibles et sélectionnés avec soin.
-      </p>
-
-      <p>
-        Nous mettons à l'honneur le Made in Sénégal,
-        les artisans, les créateurs et les producteurs locaux.
-        Acheter chez TEBBY, c'est aussi soutenir le savoir-faire local.
-      </p>
-
-      <p><strong>TEBBY, la marque qui rassure.</strong></p>
-    </div>
-  </section>
-
-  <section class="categories" id="catalogue">
+  <section id="boutique">
     <h2 class="section-title">Notre catalogue</h2>
     <div class="gold-line"></div>
 
+    <h3 class="category-title">Costumes africains</h3>
     <div class="products">
 
       <article class="product">
-        <div class="photo-placeholder">Photo du costume africain à ajouter</div>
-        <h3>Costumes africains</h3>
+        <img src="ENSEMBLE%20BLANC%20DE%20LAIT%201.jpeg" alt="Costume africain blanc de lait">
+        <h3>Costume africain blanc de lait</h3>
         <p class="price">20 000 FCFA</p>
-        <a class="button" href="https://wa.me/221781898385?text=Bonjour%20TEBBY%2C%20je%20souhaite%20commander%20un%20costume%20africain.">Commander</a>
-      </article>
-
-      <article class="product">
-        <div class="photo-placeholder">Photo de l'ensemble homme à ajouter</div>
-        <h3>Ensembles chemise-pantalon homme</h3>
-        <p class="price">15 000 FCFA</p>
-        <a class="button" href="https://wa.me/221781898385?text=Bonjour%20TEBBY%2C%20je%20souhaite%20commander%20un%20ensemble%20homme.">Commander</a>
-      </article>
-
-      <article class="product">
-        <div class="photo-placeholder">Photo de l'ensemble femme à ajouter</div>
-        <h3>Ensembles classe femme</h3>
-        <p class="price">10 000 FCFA</p>
-        <a class="button" href="https://wa.me/221781898385?text=Bonjour%20TEBBY%2C%20je%20souhaite%20commander%20un%20ensemble%20femme.">Commander</a>
-      </article>
-
-      <article class="product">
-        <div class="photo-placeholder">Photo du jogging à ajouter</div>
-        <h3>Ensembles confort et jogging</h3>
-        <p class="price">12 000 FCFA</p>
-        <a class="button" href="https://wa.me/221781898385?text=Bonjour%20TEBBY%2C%20je%20souhaite%20commander%20un%20ensemble%20confort.">Commander</a>
-      </article>
-
-      <article class="product">
-        <div class="photo-placeholder">Photo de la chemise à ajouter</div>
-        <h3>Chemises homme</h3>
-        <p class="price">7 000 FCFA</p>
-        <a class="button" href="https://wa.me/221781898385?text=Bonjour%20TEBBY%2C%20je%20souhaite%20commander%20une%20chemise.">Commander</a>
+        <a class="button" href="https://wa.me/221781898385?text=Bonjour%20TEBBY%2C%20je%20commande%20le%20costume%20africain.">Commander</a>
       </article>
 
     </div>
+
+    <h3 class="category-title">Ensembles homme</h3>
+    <div class="products">
+
+      <article class="product">
+        <img src="ENSEMBLE%20BLEU%20RAILLE%201.jpeg" alt="Ensemble bleu rayé">
+        <h3>Ensemble bleu rayé</h3>
+        <p class="price">15 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385?text=Bonjour%2C%20je%20commande%20l%27ensemble%20bleu.">Commander</a>
+      </article>
+
+      <article class="product">
+        <img src="ENSEMBLE%20MARRON%20RAILLE%201.jpeg" alt="Ensemble marron rayé">
+        <h3>Ensemble marron rayé</h3>
+        <p class="price">15 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+      <article class="product">
+        <img src="ENSEMBLE%20VERT%20JAUNE%201.jpeg" alt="Ensemble vert et jaune">
+        <h3>Ensemble vert et jaune</h3>
+        <p class="price">15 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+      <article class="product">
+        <img src="ENSEMBLE%20VERT%20JAUNE%202.jpeg" alt="Ensemble vert et jaune modèle 2">
+        <h3>Ensemble vert et jaune - Modèle 2</h3>
+        <p class="price">15 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+      <article class="product">
+        <img src="ENSEMBLE%20VERT%20VERT%201.jpeg" alt="Ensemble vert">
+        <h3>Ensemble vert</h3>
+        <p class="price">15 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+      <article class="product">
+        <img src="ENSEMBLE%20VERT%20VERT%202.jpeg" alt="Ensemble vert modèle 2">
+        <h3>Ensemble vert - Modèle 2</h3>
+        <p class="price">15 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+      <article class="product">
+        <img src="UNISEX%20BLEU%202.jpeg" alt="Ensemble unisexe bleu">
+        <h3>Ensemble unisexe bleu</h3>
+        <p class="price">15 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+      <article class="product">
+        <img src="unisex%20bleu%201.jpeg" alt="Ensemble unisexe bleu modèle 1">
+        <h3>Ensemble unisexe bleu - Modèle 1</h3>
+        <p class="price">15 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+    </div>
+
+    <h3 class="category-title">Ensembles femme</h3>
+    <div class="products">
+
+      <article class="product">
+        <img src="ensemble%20classe%20femme.jpeg" alt="Ensemble classe femme">
+        <h3>Ensemble classe femme</h3>
+        <p class="price">10 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+      <article class="product">
+        <img src="ensemble%20jogging%20femme.jpeg" alt="Ensemble jogging femme">
+        <h3>Ensemble jogging femme</h3>
+        <p class="price">15 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+    </div>
+
+    <h3 class="category-title">Chemises</h3>
+    <div class="products">
+
+      <article class="product">
+        <img src="blanc%20de%20lait.jpeg" alt="Chemise blanc de lait">
+        <h3>Chemise blanc de lait</h3>
+        <p class="price">7 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+    </div>
+
+    <h3 class="category-title">Tee-shirts</h3>
+    <div class="products">
+
+      <article class="product">
+        <img src="tee%20shirt%20blanc%202.jpeg" alt="Tee-shirt blanc">
+        <h3>Tee-shirt blanc</h3>
+        <p class="price">5 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+      <article class="product">
+        <img src="tee%20shirt%20noir1.jpeg" alt="Tee-shirt noir">
+        <h3>Tee-shirt noir</h3>
+        <p class="price">5 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+      <article class="product">
+        <img src="tee%20shirt%20rouge.jpeg" alt="Tee-shirt rouge">
+        <h3>Tee-shirt rouge</h3>
+        <p class="price">5 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+    </div>
+
+    <h3 class="category-title">Robes</h3>
+    <div class="products">
+
+      <article class="product">
+        <img src="robe%20beige.jpeg" alt="Robe beige">
+        <h3>Robe beige</h3>
+        <p class="price">10 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+    </div>
+
+    <h3 class="category-title">Chaussures</h3>
+    <div class="products">
+
+      <article class="product">
+        <img src="chaussure.jpeg" alt="Chaussures">
+        <h3>Chaussures</h3>
+        <p class="price">15 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+    </div>
+
+    <h3 class="category-title">Casquettes</h3>
+    <div class="products">
+
+      <article class="product">
+        <img src="casquette%20blanc.jpeg" alt="Casquette blanche">
+        <h3>Casquette blanche</h3>
+        <p class="price">5 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+      <article class="product">
+        <img src="casquette%20noir.jpeg" alt="Casquette noire">
+        <h3>Casquette noire</h3>
+        <p class="price">5 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+    </div>
+
+    <h3 class="category-title">Lunettes</h3>
+    <div class="products">
+
+      <article class="product">
+        <img src="lunette%20tebby.jpeg" alt="Lunettes TEBBY">
+        <h3>Lunettes TEBBY</h3>
+        <p class="price">5 000 FCFA</p>
+        <a class="button" href="https://wa.me/221781898385">Commander</a>
+      </article>
+
+    </div>
+
   </section>
 
   <section id="contact" class="contact">
@@ -318,14 +419,10 @@
     <p>Commande et livraison selon les modalités convenues avec notre équipe.</p>
   </section>
 
-</main>
-
-<footer>
-  <p>© 2026 TEBBY - Tous droits réservés.</p>
-  <p>TEBBY, LA MARQUE QUI RASSURE.</p>
-  <p>Boutique en ligne Made in Sénégal.</p>
-</footer>
+  <footer>
+    <p><span>TEBBY</span> - La marque qui rassure.</p>
+    <p>© 2026 TEBBY. Tous droits réservés.</p>
+  </footer>
 
 </body>
 </html>
-
