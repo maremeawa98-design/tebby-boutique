@@ -10,151 +10,54 @@
   <meta name="google-site-verification" content="UmVAyaVMtIF9Ehahc8qQJ0GQKgs87AhaxHEKYfViTGo">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: Arial, sans-serif;
-      color: #222;
-      background: #fff;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #111;
-      color: white;
-      padding: 20px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    header h1 {
-      color: #d4af37;
-      font-size: 30px;
-      letter-spacing: 3px;
-    }
-
-    nav { display: flex; flex-wrap: wrap; gap: 18px; }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    nav a:hover { color: #d4af37; }
-
-    .hero {
-      background: linear-gradient(120deg, #111, #393124);
-      color: white;
-      text-align: center;
-      padding: 90px 20px;
-    }
-
-    .hero h2 { font-size: 38px; margin-bottom: 15px; }
-    .hero p { font-size: 17px; margin-bottom: 15px; }
-
-    .button {
-      display: inline-block;
-      background: #d4af37;
-      color: #111;
-      padding: 12px 23px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 8px;
-    }
-
-    .button:hover { background: #f0d46e; }
-
-    section { padding: 55px 7%; }
-
-    .section-title {
-      text-align: center;
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    .gold-line {
-      width: 65px;
-      height: 3px;
-      background: #d4af37;
-      margin: 0 auto 35px;
-    }
-
-    .category-title {
-      font-size: 23px;
-      margin: 35px 0 20px;
-      border-left: 4px solid #d4af37;
-      padding-left: 12px;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-    }
-
-    .product {
-      background: white;
-      border: 1px solid #eee;
-      border-radius: 8px;
-      overflow: hidden;
-      text-align: center;
-      padding-bottom: 18px;
-      box-shadow: 0 3px 12px #0000000c;
-    }
-
-    .product img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      display: block;
-    }
-.product img {
-  width: 100%;
-  height: 280px;
-  object-fit: contain;
-  background: #f7f7f7;
-  display: block;
-}
-    }
-
-    .product .button {
-      font-size: 13px;
-      padding: 10px 18px;
-    }
-
-    .contact {
-      background: #f7f7f7;
-      text-align: center;
-    }
-
-    .contact p { margin: 10px 0; }
-
-    .contact a {
-      color: #8b6b13;
-      font-weight: bold;
-    }
-
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 22px;
-    }
-
-    footer span { color: #d4af37; }
-
-    @media (max-width: 600px) {
-      header { justify-content: center; text-align: center; }
-      nav { justify-content: center; }
-      .hero h2 { font-size: 29px; }
-      section { padding: 40px 5%; }
-    }
-  </style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { --ink:#171717; --gold:#c6a24a; --cream:#f8f5ee; --muted:#777; }
+  html { scroll-behavior: smooth; }
+  body { font-family: Arial, sans-serif; color:var(--ink); background:#fff; line-height:1.6; }
+  header { background:var(--ink); color:#fff; padding:18px 7%; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px; position:sticky; top:0; z-index:10; box-shadow:0 3px 16px #0002; }
+  header h1 { color:var(--gold); font-size:30px; letter-spacing:5px; font-weight:800; }
+  nav { display:flex; flex-wrap:wrap; gap:22px; }
+  nav a { color:#fff; text-decoration:none; font-size:14px; transition:color .2s; }
+  nav a:hover { color:var(--gold); }
+  .hero { background:radial-gradient(circle at 50% 0%,#51452d 0,#29251e 42%,#141414 100%); color:#fff; text-align:center; padding:100px 20px 105px; }
+  .hero h2 { font-size:clamp(32px,5vw,54px); line-height:1.15; margin-bottom:18px; letter-spacing:.5px; }
+  .hero p { font-size:17px; color:#eee8da; margin:8px auto; max-width:650px; }
+  .hero p:first-of-type { color:var(--gold); font-weight:bold; letter-spacing:2px; text-transform:uppercase; font-size:13px; }
+  .button { display:inline-block; background:var(--gold); color:#171717; padding:13px 25px; border-radius:3px; text-decoration:none; font-weight:bold; margin:12px 6px 0; transition:transform .2s,background .2s; }
+  .button:hover { background:#e0c16f; transform:translateY(-2px); }
+  section { padding:62px 7%; }
+  .brand-intro { background:var(--cream); text-align:center; padding-top:48px; padding-bottom:48px; }
+  .brand-intro .intro-label { color:#9b792c; font-size:12px; font-weight:bold; letter-spacing:3px; text-transform:uppercase; margin-bottom:8px; }
+  .brand-intro h2 { font-size:28px; margin-bottom:12px; }
+  .brand-intro p { max-width:760px; margin:0 auto; color:#555; }
+  .section-title { text-align:center; font-size:clamp(25px,3vw,32px); margin-bottom:10px; }
+  .gold-line { width:58px; height:3px; background:var(--gold); margin:0 auto 38px; }
+  .category-title { font-size:22px; margin:38px 0 19px; border-left:4px solid var(--gold); padding-left:13px; }
+  .products { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:24px; }
+  .product { background:#fff; border:1px solid #eee9df; border-radius:8px; overflow:hidden; text-align:center; padding-bottom:20px; box-shadow:0 5px 18px #1919190b; transition:transform .2s,box-shadow .2s; }
+  .product:hover { transform:translateY(-4px); box-shadow:0 10px 24px #19191916; }
+  .product img { width:100%; height:285px; object-fit:contain; background:#f8f7f4; display:block; padding:10px; }
+  .product h3 { margin:16px 10px 5px; font-size:16px; min-height:48px; }
+  .price { color:#9b792c; font-weight:800; font-size:20px; margin:8px; }
+  .product .button { font-size:13px; padding:10px 20px; }
+  .contact { background:var(--cream); text-align:center; }
+  .contact p { margin:10px 0; color:#555; }
+  .contact a { color:#87671e; font-weight:bold; text-decoration:none; }
+  footer { background:var(--ink); color:#eee; text-align:center; padding:25px 15px; font-size:14px; }
+  footer span { color:var(--gold); font-weight:bold; letter-spacing:2px; }
+  @media(max-width:600px) {
+    header { justify-content:center; text-align:center; padding:16px 5%; }
+    nav { justify-content:center; gap:14px; }
+    .hero { padding:75px 18px; }
+    section { padding:44px 5%; }
+    .products { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .product img { height:190px; padding:6px; }
+    .product h3 { font-size:14px; min-height:42px; }
+    .price { font-size:17px; }
+    .product .button { padding:9px 12px; font-size:12px; }
+  }
+  @media(max-width:360px) { .products { grid-template-columns:1fr; } .product img { height:250px; } }
+</style>
 </head>
 
 <body>
@@ -173,6 +76,12 @@
   <p>TEBBY, la marque qui rassure.</p>
   <p>Découvrez notre collection de vêtements et accessoires.</p>
   <a class="button" href="#boutique">Découvrir la boutique</a>
+</section>
+
+<section class="brand-intro">
+  <p class="intro-label">L'esprit TEBBY</p>
+  <h2>Le style qui vous ressemble</h2>
+  <p>Bienvenue chez TEBBY, votre boutique de mode au Sénégal. Découvrez une sélection de vêtements et d'accessoires pensés pour vous accompagner avec élégance au quotidien. Notre engagement : vous proposer de beaux articles et un accompagnement simple pour vos commandes.</p>
 </section>
 
 <section id="boutique">
